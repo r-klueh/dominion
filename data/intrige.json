@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Burghof",
+    "value": 2
+  },
+  {
+    "name": "Handlanger",
+    "value": 2
+  },
+  {
+    "name": "Herumtreiberin",
+    "value": 2
+  },
+  {
+    "name": "Armenviertel",
+    "value": 3
+  },
+  {
+    "name": "Maskerade",
+    "value": 3
+  },
+  {
+    "name": "Trickser",
+    "value": 3
+  },
+  {
+    "name": "Verwalter",
+    "value": 3
+  },
+  {
+    "name": "Wunschbrunnen",
+    "value": 3
+  },
+  {
+    "name": "Baron",
+    "value": 4
+  },
+  {
+    "name": "Bergwerk",
+    "value": 4
+  },
+  {
+    "name": "Brücke",
+    "value": 4
+  },
+  {
+    "name": "Diplomatin",
+    "value": 4
+  },
+  {
+    "name": "Eisenhütte",
+    "value": 4
+  },
+  {
+    "name": "Geheimgang",
+    "value": 4
+  },
+  {
+    "name": "Mühle",
+    "value": 4
+  },
+  {
+    "name": "Verschwörer",
+    "value": 4
+  },
+  {
+    "name": "Anbau",
+    "value": 5
+  },
+  {
+    "name": "Austausch",
+    "value": 5
+  },
+  {
+    "name": "Handelsposten",
+    "value": 5
+  },
+  {
+    "name": "Herzog",
+    "value": 5
+  },
+  {
+    "name": "Höflinge",
+    "value": 5
+  },
+  {
+    "name": "Kerkermeister",
+    "value": 5
+  },
+  {
+    "name": "Lakai",
+    "value": 5
+  },
+  {
+    "name": "Patrouille",
+    "value": 5
+  },
+  {
+    "name": "Adlige",
+    "value": 5
+  },
+  {
+    "name": "Harem",
+    "value": 6
+  }
+]
