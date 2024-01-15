@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Burggraben",
+    "value": 2
+  },
+  {
+    "name": "Kapelle",
+    "value": 2
+  },
+  {
+    "name": "Keller",
+    "value": 2
+  },
+  {
+    "name": "Dorf",
+    "value": 3
+  },
+  {
+    "name": "Händlerin",
+    "value": 3
+  },
+  {
+    "name": "Vasall",
+    "value": 3
+  },
+  {
+    "name": "Vorbotin",
+    "value": 3
+  },
+  {
+    "name": "Werkstatt",
+    "value": 3
+  },
+  {
+    "name": "Bürokrat",
+    "value": 4
+  },
+  {
+    "name": "Geldverleiher",
+    "value": 4
+  },
+  {
+    "name": "Miliz",
+    "value": 4
+  },
+  {
+    "name": "Schmiede",
+    "value": 4
+  },
+  {
+    "name": "Thronsaal",
+    "value": 4
+  },
+  {
+    "name": "Umbau",
+    "value": 4
+  },
+  {
+    "name": "Wilddiebin",
+    "value": 4
+  },
+  {
+    "name": "Banditin",
+    "value": 5
+  },
+  {
+    "name": "Bibliothek",
+    "value": 5
+  },
+  {
+    "name": "Hexe",
+    "value": 5
+  },
+  {
+    "name": "Jahrmarkt",
+    "value": 5
+  },
+  {
+    "name": "Laboratorium",
+    "value": 5
+  },
+  {
+    "name": "Markt",
+    "value": 5
+  },
+  {
+    "name": "Mine",
+    "value": 5
+  },
+  {
+    "name": "Ratsversammlung",
+    "value": 5
+  },
+  {
+    "name": "Torwächterin",
+    "value": 5
+  },
+  {
+    "name": "Töpferei",
+    "value": 6
+  },
+  {
+    "name": "Gärten",
+    "value": 4
+  }
+]
