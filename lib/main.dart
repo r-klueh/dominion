@@ -1,5 +1,6 @@
+import 'package:dominion/data/settings_data.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -17,7 +18,11 @@ class DominionApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: const ColorScheme.dark(primary: Color(0xFF081287), onPrimary: Colors.white),
       ),
-      home: const HomePage(),
+      home: ChangeNotifierProvider(
+        create: (context) => SettingsData(context),
+        child: const HomePage()
+      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

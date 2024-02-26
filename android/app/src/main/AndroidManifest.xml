@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.rklueh.dominion">
    <application
-        android:label="dominion"
+        android:label="Dominion"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

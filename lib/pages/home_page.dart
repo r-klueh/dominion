@@ -1,8 +1,10 @@
-import 'dart:convert';
-
 import 'package:collection/collection.dart';
 import 'package:dominion/data/game_card.dart';
+import 'package:dominion/data/settings_data.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'settings_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,11 +16,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Map<String, List<GameCard>> _cards = {};
 
-  List<GameCard> _basicCards = [];
-  List<GameCard> _intrigeCards = [];
+  void _selectCards(BuildContext context) {
+    List<GameCard> selection =
+        Provider.of<SettingsData>(context, listen: false).availableCards;
 
-  void _selectCards() {
-    List<GameCard> selection = [..._basicCards, ..._intrigeCards];
     selection.shuffle();
 
     setState(() {
@@ -39,60 +40,83 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void _loadCards() {
-    DefaultAssetBundle.of(context)
-        .loadString("data/basic.json")
-        .then((value) => jsonDecode(value) as List<dynamic>)
-        .then(
-            (value) => value.map((e) => GameCard(e['name'], "Basis")).toList())
-        .then((value) => setState(() {
-              _basicCards = value;
-            }));
-
-    DefaultAssetBundle.of(context)
-        .loadString("data/intrige.json")
-        .then((value) => jsonDecode(value) as List<dynamic>)
-        .then((value) =>
-            value.map((e) => GameCard(e['name'], "Intrige")).toList())
-        .then((value) => setState(() {
-              _intrigeCards = value;
-            }));
-  }
-
   @override
   Widget build(BuildContext context) {
-    _loadCards();
+    final ThemeData theme = Theme.of(context);
 
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            ..._cards.entries.toList().slices(3).map(
-                  (e) => Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      ...e.map(
-                        (e) => Column(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              FilledButton(
+                  onPressed: () => {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const SettingsPage();
+                        }))
+                      },
+                  child: const Text("Settings"))
+            ],
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Consumer<SettingsData>(builder: (context, value, child) {
+                return ToggleButtons(
+                    constraints: const BoxConstraints(
+                      minHeight: 40.0,
+                      minWidth: 80.0,
+                    ),
+                    isSelected: value.selectedPackages,
+                    fillColor: theme.colorScheme.primary,
+                    selectedColor: theme.colorScheme.onPrimary,
+                    color: theme.colorScheme.onPrimary.withOpacity(0.5),
+                    onPressed: (index) {
+                      Provider.of<SettingsData>(context, listen: false)
+                          .toggleGamePack(index);
+                    },
+                    children: [
+                      Text("Basis", style: theme.textTheme.bodyLarge),
+                      Text("Intrige", style: theme.textTheme.bodyLarge)
+                    ]);
+              })
+            ],
+          ),
+          Expanded(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ..._cards.entries.toList().slices(3).map(
+                        (e) => Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              e.key,
-                              style: Theme.of(context).textTheme.headlineMedium,
+                          children: <Widget>[
+                            ...e.map(
+                              (e) => Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    e.key,
+                                    style: theme.textTheme.headlineMedium,
+                                  ),
+                                  ...e.value.map((card) => Text(card.name))
+                                ],
+                              ),
                             ),
-                            ...e.value.map((card) => Text(card.name))
                           ],
                         ),
                       ),
-                    ],
-                  ),
-                ),
-          ],
-        ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _selectCards,
+        onPressed: () => _selectCards(context),
         tooltip: 'SelectCards',
         child: const Icon(Icons.refresh),
       ),
