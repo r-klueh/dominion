@@ -12,19 +12,9 @@ class SettingsData extends ChangeNotifier {
   final List<bool> _selectedPackages = [true, true];
 
   SettingsData(BuildContext context) {
-    DefaultAssetBundle.of(context)
-        .loadString("data/basic.json")
-        .then((value) => jsonDecode(value) as List<dynamic>)
-        .then(
-            (value) => value.map((e) => GameCard(e['name'], "Basis")).toList())
-        .then((value) => {_basicCards = value});
+    readCards(context, "Basic").then((value) => {_basicCards = value});
 
-    DefaultAssetBundle.of(context)
-        .loadString("data/intrige.json")
-        .then((value) => jsonDecode(value) as List<dynamic>)
-        .then((value) =>
-            value.map((e) => GameCard(e['name'], "Intrige")).toList())
-        .then((value) => {_intrigeCards = value});
+    readCards(context, "Intrige").then((value) => {_intrigeCards = value});
   }
 
   List<GameCard> get availableCards => [_basicCards, _intrigeCards]
@@ -39,3 +29,15 @@ class SettingsData extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+Future<List<GameCard>> readCards(BuildContext context, String package) =>
+    DefaultAssetBundle.of(context)
+        .loadString("data/${package.toLowerCase()}.json")
+        .then((value) => jsonDecode(value) as List<dynamic>)
+        .then((value) => value
+            .map((e) =>
+                GameCard(e['name'], package, e['cost'], parseTypes(e['types'])))
+            .toList());
+
+List<CardType> parseTypes(dynamic types) =>
+    (types! as List<dynamic>).map((e) => CardType.fromString(e)).toList();

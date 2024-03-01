@@ -1,106 +1,132 @@
 [
   {
     "name": "Burghof",
-    "value": 2
+    "cost": 2,
+    "types": ["action"]
   },
   {
     "name": "Handlanger",
-    "value": 2
+    "cost": 2,
+    "types": ["action"]
   },
   {
     "name": "Herumtreiberin",
-    "value": 2
+    "cost": 2,
+    "types": ["action"]
   },
   {
     "name": "Armenviertel",
-    "value": 3
+    "cost": 3,
+    "types": ["action"]
   },
   {
     "name": "Maskerade",
-    "value": 3
+    "cost": 3,
+    "types": ["action"]
   },
   {
     "name": "Trickser",
-    "value": 3
+    "cost": 3,
+    "types": ["action", "attack"]
   },
   {
     "name": "Verwalter",
-    "value": 3
+    "cost": 3,
+    "types": ["action"]
   },
   {
     "name": "Wunschbrunnen",
-    "value": 3
+    "cost": 3,
+    "types": ["action"]
   },
   {
     "name": "Baron",
-    "value": 4
+    "cost": 4,
+    "types": ["action"]
   },
   {
     "name": "Bergwerk",
-    "value": 4
+    "cost": 4,
+    "types": ["action"]
   },
   {
     "name": "Brücke",
-    "value": 4
+    "cost": 4,
+    "types": ["action"]
   },
   {
     "name": "Diplomatin",
-    "value": 4
+    "cost": 4,
+    "types": ["action", "reaction"]
   },
   {
     "name": "Eisenhütte",
-    "value": 4
+    "cost": 4,
+    "types": ["action"]
   },
   {
     "name": "Geheimgang",
-    "value": 4
+    "cost": 4,
+    "types": ["action"]
   },
   {
     "name": "Mühle",
-    "value": 4
+    "cost": 4,
+    "types": ["action", "points"]
   },
   {
     "name": "Verschwörer",
-    "value": 4
+    "cost": 4,
+    "types": ["action"]
   },
   {
     "name": "Anbau",
-    "value": 5
+    "cost": 5,
+    "types": ["action"]
   },
   {
     "name": "Austausch",
-    "value": 5
+    "cost": 5,
+    "types": ["action"]
   },
   {
     "name": "Handelsposten",
-    "value": 5
+    "cost": 5,
+    "types": ["action"]
   },
   {
     "name": "Herzog",
-    "value": 5
+    "cost": 5,
+    "types": ["points"]
   },
   {
     "name": "Höflinge",
-    "value": 5
+    "cost": 5,
+    "types": ["action"]
   },
   {
     "name": "Kerkermeister",
-    "value": 5
+    "cost": 5,
+    "types": ["action", "attack"]
   },
   {
     "name": "Lakai",
-    "value": 5
+    "cost": 5,
+    "types": ["action", "attack"]
   },
   {
     "name": "Patrouille",
-    "value": 5
+    "cost": 5,
+    "types": ["action"]
   },
   {
     "name": "Adlige",
-    "value": 5
+    "cost": 5,
+    "types": ["action", "points"]
   },
   {
     "name": "Harem",
-    "value": 6
+    "cost": 6,
+    "types": ["money", "points"]
   }
 ]

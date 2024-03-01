@@ -1,106 +1,189 @@
 [
   {
     "name": "Burggraben",
-    "value": 2
+    "cost": 2,
+    "types": [
+      "action",
+      "reaction"
+    ]
   },
   {
     "name": "Kapelle",
-    "value": 2
+    "cost": 2,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Keller",
-    "value": 2
+    "cost": 2,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Dorf",
-    "value": 3
+    "cost": 3,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Händlerin",
-    "value": 3
+    "cost": 3,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Vasall",
-    "value": 3
+    "cost": 3,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Vorbotin",
-    "value": 3
+    "cost": 3,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Werkstatt",
-    "value": 3
+    "cost": 3,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Bürokrat",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "action",
+      "attack"
+    ]
   },
   {
     "name": "Geldverleiher",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Miliz",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "action",
+      "attack"
+    ]
   },
   {
     "name": "Schmiede",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Thronsaal",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Umbau",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Wilddiebin",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Banditin",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action",
+      "attack"
+    ]
   },
   {
     "name": "Bibliothek",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Hexe",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action",
+      "attack"
+    ]
   },
   {
     "name": "Jahrmarkt",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Laboratorium",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Markt",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Mine",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Ratsversammlung",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Torwächterin",
-    "value": 5
+    "cost": 5,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Töpferei",
-    "value": 6
+    "cost": 6,
+    "types": [
+      "action"
+    ]
   },
   {
     "name": "Gärten",
-    "value": 4
+    "cost": 4,
+    "types": [
+      "points"
+    ]
   }
 ]

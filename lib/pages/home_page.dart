@@ -31,7 +31,8 @@ class _HomePageState extends State<HomePage> {
             if (!packages.containsKey(package)) {
               packages[package] = [];
             }
-            packages[package]?.add(element);
+            packages[package]!.add(element);
+            packages[package]!.sort((a,b) => compareCards(a,b));
             return packages;
           })
           .entries
@@ -122,4 +123,13 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+int compareCards(GameCard a, GameCard b){
+  int costCompare = a.cost-b.cost;
+  if(costCompare!=0){
+    return costCompare;
+  }
+
+  return a.name.compareTo(b.name);
 }
