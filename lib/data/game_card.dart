@@ -13,9 +13,16 @@ enum CardType {
   points,
   duration,
   attack,
+  reserve,
+  traveler,
   reaction;
 
-  static CardType fromString(String type) =>
-      CardType.values.firstWhere((element) => element.name == type);
+  static CardType fromString(String type) {
+    try {
+      return CardType.values.firstWhere((element) => element.name == type);
+    } catch (e) {
+      print(type);
+      throw e;
+    }
+  }
 }
-

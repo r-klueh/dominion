@@ -19,8 +19,10 @@ class _HomePageState extends State<HomePage> {
   void _selectCards(BuildContext context) {
     List<GameCard> selection =
         Provider.of<SettingsData>(context, listen: false).availableCards;
+    selection.forEach((element) {print(element.package);});
 
     selection.shuffle();
+
 
     setState(() {
       _cards = Map.fromEntries(selection
@@ -32,7 +34,7 @@ class _HomePageState extends State<HomePage> {
               packages[package] = [];
             }
             packages[package]!.add(element);
-            packages[package]!.sort((a,b) => compareCards(a,b));
+            packages[package]!.sort((a, b) => compareCards(a, b));
             return packages;
           })
           .entries
@@ -61,14 +63,14 @@ class _HomePageState extends State<HomePage> {
                   child: const Text("Settings"))
             ],
           ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Consumer<SettingsData>(builder: (context, value, child) {
-                return ToggleButtons(
+          Consumer<SettingsData>(builder: (context, value, child) {
+            return Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ToggleButtons(
                     constraints: const BoxConstraints(
                       minHeight: 40.0,
-                      minWidth: 80.0,
+                      minWidth: 90.0,
                     ),
                     isSelected: value.selectedPackages,
                     fillColor: theme.colorScheme.primary,
@@ -80,11 +82,12 @@ class _HomePageState extends State<HomePage> {
                     },
                     children: [
                       Text("Basis", style: theme.textTheme.bodyLarge),
-                      Text("Intrige", style: theme.textTheme.bodyLarge)
-                    ]);
-              })
-            ],
-          ),
+                      Text("Intrige", style: theme.textTheme.bodyLarge),
+                      Text("Abenteuer", style: theme.textTheme.bodyLarge)
+                    ])
+              ],
+            );
+          }),
           Expanded(
             child: Center(
               child: Column(
@@ -125,9 +128,9 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-int compareCards(GameCard a, GameCard b){
-  int costCompare = a.cost-b.cost;
-  if(costCompare!=0){
+int compareCards(GameCard a, GameCard b) {
+  int costCompare = a.cost - b.cost;
+  if (costCompare != 0) {
     return costCompare;
   }
 

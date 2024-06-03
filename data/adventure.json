@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Königliche Münze",
+    "cost": 2,
+    "types": [
+      "money",
+      "reserve"
+    ]
+  },
+  {
+    "name": "Page",
+    "cost": 2,
+    "types": [
+      "action",
+      "traveler"
+    ]
+  },
+  {
+    "name": "Kleinbauer",
+    "cost": 2,
+    "types": [
+      "action",
+      "traveler"
+    ]
+  },
+  {
+    "name": "Rattenfänger",
+    "cost": 2,
+    "types": [
+      "action",
+      "reserve"
+    ]
+  },
+  {
+    "name": "Zerstörung",
+    "cost": 2,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Amulett",
+    "cost": 3,
+    "types": [
+      "action",
+      "duration"
+    ]
+  },
+  {
+    "name": "Karawanenwächter",
+    "cost": 3,
+    "types": [
+      "action",
+      "duration",
+      "reaction"
+    ]
+  },
+  {
+    "name": "Verlies",
+    "cost": 2,
+    "types": [
+      "action",
+      "duration"
+    ]
+  },
+  {
+    "name": "Ausrüstung",
+    "cost": 3,
+    "types": [
+      "action",
+      "duration"
+    ]
+  },
+  {
+    "name": "Kundschafter",
+    "cost": 3,
+    "types": [
+      "action",
+      "reserve"
+    ]
+  },
+  {
+    "name": "Duplikat",
+    "cost": 4,
+    "types": [
+      "action",
+      "reserve"
+    ]
+  },
+  {
+    "name": "Elster",
+    "cost": 4,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Kurier",
+    "cost": 4,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Geizhals",
+    "cost": 4,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Hafenstadt",
+    "cost": 4,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Wildhüter",
+    "cost": 4,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Transformation",
+    "cost": 4,
+    "types": [
+      "action",
+      "reserve"
+    ]
+  },
+  {
+    "name": "Kunsthandwerker",
+    "cost": 5,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Brückentroll",
+    "cost": 5,
+    "types": [
+      "action",
+      "duration",
+      "attack"
+    ]
+  },
+  {
+    "name": "Ferne Lande",
+    "cost": 5,
+    "types": [
+      "action",
+      "reserve",
+      "points"
+    ]
+  },
+  {
+    "name": "Riese",
+    "cost": 5,
+    "types": [
+      "action",
+      "attack"
+    ]
+  },
+  {
+    "name": "Geisterwald",
+    "cost": 5,
+    "types": [
+      "action",
+      "duration",
+      "attack"
+    ]
+  },
+  {
+    "name": "Verlorene Stadt",
+    "cost": 5,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Relikt",
+    "cost": 5,
+    "types": [
+      "money",
+      "attack"
+    ]
+  },
+  {
+    "name": "Königliche Kutsche",
+    "cost": 5,
+    "types": [
+      "action",
+      "reserve"
+    ]
+  },
+  {
+    "name": "Geschichtenerzähler",
+    "cost": 5,
+    "types": [
+      "action"
+    ]
+  },
+  {
+    "name": "Sumpfhexe",
+    "cost": 5,
+    "types": [
+      "action",
+      "duration",
+      "attack"
+    ]
+  },
+  {
+    "name": "Schatz",
+    "cost": 5,
+    "types": [
+      "money"
+    ]
+  },
+  {
+    "name": "Weinhändler",
+    "cost": 5,
+    "types": [
+      "action",
+      "reserve"
+    ]
+  },
+  {
+    "name": "Gefolgsmann",
+    "cost": 6,
+    "types": [
+      "action",
+      "duration"
+    ]
+  }
+]

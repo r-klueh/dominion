@@ -8,16 +8,19 @@ import 'game_card.dart';
 class SettingsData extends ChangeNotifier {
   List<GameCard> _basicCards = [];
   List<GameCard> _intrigeCards = [];
+  List<GameCard> _adventure = [];
 
-  final List<bool> _selectedPackages = [true, true];
+  final List<bool> _selectedPackages = [true, true, true];
 
   SettingsData(BuildContext context) {
     readCards(context, "Basic").then((value) => {_basicCards = value});
 
     readCards(context, "Intrige").then((value) => {_intrigeCards = value});
+
+    readCards(context, "Adventure").then((value) => {_adventure = value});
   }
 
-  List<GameCard> get availableCards => [_basicCards, _intrigeCards]
+  List<GameCard> get availableCards => [_basicCards, _intrigeCards, _adventure]
       .whereIndexed((index, element) => _selectedPackages[index])
       .flattened
       .toList();
