@@ -19,10 +19,8 @@ class _HomePageState extends State<HomePage> {
   void _selectCards(BuildContext context) {
     List<GameCard> selection =
         Provider.of<SettingsData>(context, listen: false).availableCards;
-    selection.forEach((element) {print(element.package);});
 
     selection.shuffle();
-
 
     setState(() {
       _cards = Map.fromEntries(selection
